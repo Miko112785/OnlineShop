@@ -113,27 +113,111 @@ const sampleProducts = [
     popular: true,
     imageURL: "https://ae04.alicdn.com/kf/HTB16ciQyf9TBuNjy0Fcq6zeiFXa4.jpg_640x640.jpg_.webp"
   },
-  {
-    id: 11,
-    name: "игрушка",
-    category: "Детские",
-    price: 4000,
-    description: "",
-    inStock: true,
-    popular: true,
-    imageURL: "https://static.insales-cdn.com/r/CcfK7qd0Qy4/rs:fit:400:0:1/q:100/plain/images/products/1/2044/618743804/large_card__6_.png@webp"
-  },
-  {
-    id: 12,
-    name: "Игрушка1",
-    category: "Игрушки",
-    price: 4000,
-    description: "",
-    inStock: true,
-    popular: true,
-    imageURL: "https://static.insales-cdn.com/r/ebj0WT7gcnc/rs:fit:400:0:1/q:100/plain/images/products/1/2140/618743900/large_card__7_.png@webp"
-  },
-]
+    {
+      id: 1,
+      name: "Мягкая игрушка",
+      category: "Clothing and Shoes",
+      price: 55,
+      description: "Очаровательная мягкая игрушка – сказочный персонаж, любимый всеми детьми. Игрушка изготовлена из приятного на ощупь, высококачественного текстильного материала с бархатистой поверхностью. ",
+      inStock: true,
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/V6OFZcN0zBg/rs:fit:360:0:1/q:100/plain/images/products/1/2044/618743804/large_card__6_.png@webp"
+    },
+    {
+      id: 2,
+      name: "Миньон",
+      category: "Jewelry and Watches",
+      price: 101,
+      description: "Тот самый персонаж миньон из популярного мультфильма. Милаха Миньон, с большими глазами и чудесной улыбкой, эта милая популярная мягкая игрушка станет отличным подарком для взрослых и детей. ",
+      inStock: true,
+  
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/CGef8Cgx8LA/rs:fit:360:0:1/q:100/plain/images/products/1/4410/618746170/large_card__14_.png@webp"
+    },
+    {
+      id: 3,
+      name: "Мягкая игрушка",
+      category: "Jewelry and Watches",
+      price: 200,
+      description:
+        '* 36 mm stainless steel case with mineral dial window\n' +
+        '* Automatic self-wind movement with analog display\n' +
+        '* Stainless steel bracelet with fold-over clasp',
+      inStock: true,
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/iXMApCNsy3w/rs:fit:360:0:1/q:100/plain/images/products/1/2140/618743900/large_card__7_.png@webp"
+    },
+    {
+      id: 4,
+      name: "Блокнот",
+      category: "Books",
+      price: 102,
+      description: "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia"+
+       "and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in"+
+       "a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life"+
+       "with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is"+
+       "until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
+      inStock: true,
+  
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/3B220T9an20/rs:fit:400:0:1/q:100/plain/images/products/1/7068/618748828/large_card__22_.png@webp"
+    },
+    {
+      id: 5,
+      name: "Горные лыжи",
+      category: "Computers",
+      price: 102,
+      description:
+        '* Amazing angles: Share consistent high-color fidelity with In-Plane Switching (IPS) technology across a 27-inch diagonal screen. A stunning vantage point for everyone, from almost anywhere\n' +
+        '* Distinctively modern and accessible: The contemporary thin profile is enhanced by the modern white and silver colors.The open wedge stand design provides convenient access to VGA and dual HDMI ports',
+      inStock: true,
+  
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/1CdmLZwVRpc/rs:fit:400:0:1/q:100/plain/images/products/1/2486/618752438/large_card__36_.png@webp"
+    },
+    {
+      id: 6,
+      name: "Фигурные коньки",
+      category: "Home",
+      price: 200,
+      description:
+        'Фигурные коньки - это коньки для активного отдыха любителей фигурного катания любого уровня.Фигурные коньки обеспечивают отличную фиксацию благодаря жесткому верху ботинок, ваши ноги будут хорошо зафиксированы. Лезвие выполнено из нержавеющей стали. Коньки прошли заточку на заводе. ',
+      inStock: true,
+  
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/8vtp5bKloGc/rs:fit:400:0:1/q:100/plain/images/products/1/2166/618752118/large_card__35_.png@webp"
+    },
+    {
+      id: 7,
+      name: " Цветные карандаши",
+      category: "Jewelry and Watches",
+      price: 200,
+      description: "Набор цветных карандашей 12 цветов изготовлен из древесины липы высокого качества. Имеют утолщенный ударостойкий грифель повышенной мягкости и яркости, при заточке не крошатся и не ломаются. ",
+      inStock: true,
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/IO94XsuQqqI/rs:fit:400:0:1/q:100/plain/images/products/1/7438/618749198/large_card__26_.png@webp"
+    },
+    {
+      id: 8,
+      name: "Школьный рюкзак",
+      category: "Clothing and Shoes",
+      price: 55,
+      description: "Школьный рюкзак подойдет для прогулок в школу и повседневной носки в городе. Материал прочный, облегченный и водонепроницаемый.",
+      inStock: true,
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/-nCmFricO_o/rs:fit:400:0:1/q:100/plain/images/products/1/714/618750666/large_card__31_.png@webp"
+    },
+    {
+      id: 9,
+      name: "Велосипед",
+      category: "Computers",
+      price: 55,
+      description: "Велосипед складной, подарит вам множество положительных эмоций от комфортной езды. Прочная рама из стали 17 размера одинаково хорошо подойдет подросткам и взрослым с ростом от 140 см до 179см. Складной велосипед удобен в транспортировке, а также в хранении.",
+      inStock: true,
+      popular: true,
+      imageURL: "https://static.insales-cdn.com/r/qoClrbMBWDQ/rs:fit:400:0:1/q:100/plain/images/products/1/2583/618752535/large_card__37_.png@webp"
+    },
+  ]
 
 /* Available categories */
 const categories = ['Одежда', 'Обувь', 'Аксессуары', "Спорт",'Красота', 'Канцелярские товары', "Телефоны и гаджеты", 'Игрушки','Товары для дома', 'Товары для животных', 'Новинки', 'Популярные', "Скидки"]
