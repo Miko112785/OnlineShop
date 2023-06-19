@@ -35,6 +35,7 @@ class ConnectedMenu extends Component {
         return (
             <div className="menu">
                 {
+                    
 
                     menuItems.filter(y => {
                         /*
@@ -69,12 +70,12 @@ class ConnectedMenu extends Component {
                                     }}
                                     style={{
                                         textDecoration: 'none',
-                                        color: "rgb(32, 32, 34)"
+                                        color: "black"
 
                                     }}
                                     activeStyle={{
                                         fontWeight: 'bold',
-                                        color: "#4282ad"
+                                        color: "#E27F86"
                                     }}
                                 >
                                     <div className="menuItem">{x.name}</div>
@@ -94,7 +95,7 @@ class ConnectedMenu extends Component {
                                         }
                                     })
                                 }}
-                                style={{ height: 30, color: "gray", marginLeft: 10, marginTop: 20, fontSize: 14 }}>
+                                style={{ height: 30, color: "black", marginLeft: 10, marginTop: 20, fontSize: 14 }}>
                                 {this.state.expanded[x.name] ?
                                     <i className="far fa-minus-square" style={{ marginRight: 5 }}></i> :
                                     <i className="far fa-plus-square" style={{ marginRight: 5 }}></i>

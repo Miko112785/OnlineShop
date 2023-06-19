@@ -15,6 +15,8 @@ import cartImage from "../../Images/logo2.png"
 import searchImage from "../../Images/search.png"
 import userImage from "../../Images/user.png"
 import heartImage from "../../Images/heart1.png"
+import menuImage from "../../Images/menu.png"
+import shoppingImage from "../../Images/shop.png"
 import Auth from "../../Auth"
 import { categories } from "../../Data"
 import Person from '@material-ui/icons/PersonOutline';
@@ -44,23 +46,35 @@ class ConnectedHeader extends Component {
         return (
             <div className="header">
                 <div className="left-part">
-                    <a href="http://localhost:3000/search/Header.js"><img  src={cartImage} alt={"Logo"} style={{ marginTop: 5, marginLeft: 5,height:70,width:70 }} width="64" height="64"/></a>
-                    <div class="menu" style={{width: 150, height: 50, marginTop: 13, marginLeft:5, borderRadius:10, background:"#E27F86", }}>
-                        <IconButton onClick={() => {
-                            this.props.dispatch(toggleMenu())
+                    <a href="http://localhost:3000/search/Header.js"><img  src={cartImage} alt={"Logo"} style={{ marginTop: 8, marginLeft: 8 ,height:85,width:90}} width="64" height="64"/></a>
+                    <div class="menu" style={{width: 110, height: 40, marginTop: 25, marginLeft:5, borderRadius:10, background:"#E27F86"}}>
+                        <IconButton onClick={() => { 
+                            this.props.dispatch(toggleMenu()) 
                         }}>
-                            <MenuIcon  size="medium"/>
+                            <img src={menuImage}  size="medium" style={{fontSize:20, width:20, height:20, justifyContent:"center" }}/>
                         </IconButton>Каталог</div>
 
-                    <TextField
-                        label="Search"
+                    <input
+                        type="text"
+                        //border= "white"
+                        //label="Поиск" 
                         value={this.state.searchTerm}
                         onChange={(e) => {
-                            this.setState({ searchTerm: e.target.value })
+                            this.setState({ searchTerm: e.target.value  })
                         }}
-                        style={{ marginLeft: 40, width: 250, marginTop: 10 }}
+                        placeholder='Поиск'
+                        style={{width: 550, height: 40, marginTop: 22, marginLeft:20, borderRadius:10, background:"#E27F86",opacity:"22%", border:"white", fontSize:16, color:"white", fontFamily:"fonts/PT-Root-UI_Bold.ttf"}}
                     />
-                    <div style={{ marginTop: 25, marginLeft: 20, width: 200 }}>
+
+                    <Button style={{ marginTop: 23.3, marginLeft:-65.5, height: 40 , borderRadius:10, background:"#E27F86", border: "none"}}
+                        variant="outlined"F
+                        color="primary"
+                      B  onClick={() => {
+                            /* Generate new URL to redirect user to */
+                            this.props.history.push('/search/?category=' + this.state.categoryFilter.value + "&term="+ this.state.searchTerm );
+                        }}> <img  src={searchImage} alt={"search"} style={{ marginTop:1, marginLeft: 1,height:25,width:25 }}/> 
+                        </Button>
+                    <div style={{ marginTop: 30, marginLeft: 20, width: 150}}>
                         <Dropdown
                             options={categoryOptions}
                             className='react-dropdown-h'
@@ -69,27 +83,20 @@ class ConnectedHeader extends Component {
                             }}
                             value={this.state.categoryFilter} />
                     </div>
-
-                    <Button style={{ marginTop: 13 , marginLeft:5, height: 50 , borderRadius:10, background:"#E27F86", }}
-                        variant="outlined"F
-                        color="primary"
-                      B  onClick={() => {
-                            /* Generate new URL to redirect user to */
-                            this.props.history.push('/search/?category=' + this.state.categoryFilter.value + "&term="+ this.state.searchTerm );
-                        }}> <img  src={searchImage} alt={"search"} style={{ marginTop:1, marginLeft: 1,height:30,width:30 }}/> 
-                        </Button>
                 </div>
                 <div className="right-part">
 
-                    <div style={{ width: 50, marginTop: 20, marginRight: 40 }}>
-                        <IconButton aria-label="Cart" onClick={() => {
-                            this.props.dispatch(showCartDlg(true))
-                        }}>
-                            <Badge badgeContent={this.props.nrOfItemsInCard} color="primary">
-                                <ShoppingCartIcon />
-                            </Badge>
-                        </IconButton>
-                    </div>
+                <div style={{ width: 50, marginTop: 20, marginRight: 40 }}>
+  <IconButton aria-label="Cart" onClick={() => {
+    this.props.dispatch(showCartDlg(true))
+  }}>
+    <Badge badgeContent={<span style={{ background: "#E27F86", color: "white", borderRadius: "50%", height:15,width:15, fontSize:"small"}}>{this.props.nrOfItemsInCard}</span>} color="">
+      <img  src={shoppingImage} alt={"shopping-card"} style={{ marginTop:-1, marginLeft: -1,height:30,width:30,}}/>
+    </Badge>
+  </IconButton>
+</div>
+
+
                     {!this.props.loggedInUser ?
                         (<Button
                             variant=""
@@ -98,7 +105,7 @@ class ConnectedHeader extends Component {
                             onClick={() => {
                                 this.props.history.push('/login');
                             }}>
-                            <img  src={userImage} alt={"user"} style={{ marginTop:1, marginLeft: 1,height:42,width:42 }}/> 
+                            <img  src={userImage} alt={"user"} style={{ marginTop:1, marginLeft: 1,height:30,width:30}}/> 
                         </Button>) :
                         (<Avatar
                             onClick={(event) => {
@@ -116,7 +123,7 @@ class ConnectedHeader extends Component {
                             onClick={() => {
                                 this.props.history.push('/login');
                             }}>
-                            <img  src={heartImage} alt={"heart"} style={{ marginTop:0, marginLeft: 1,height:35,width:38 }}/> 
+                            <img  src={heartImage} alt={"heart"} style={{ marginTop:0, marginLeft: 1,height:25,width:28 }}/> 
                         </Button>) :
                         (<Avatar
                             onClick={(event) => {
@@ -147,10 +154,12 @@ class ConnectedHeader extends Component {
                     </Menu>
                 </div>
             </div >
+
         );
+
     }
 }
-
+ 
 
 const Header = withRouter(connect(mapStateToProps)(ConnectedHeader));
 export default Header;

@@ -29,24 +29,24 @@ class ConnectedLogin extends Component {
 
         return (
             <div className="login-container">
-                <div style={{ marginBottom: 50, fontSize: 26, textAlign: "center", color: "gray" }}> Log in </div>
+                <div style={{ marginBottom: 50, fontSize: 26, textAlign: "center", color: "black" }}> Добро пожаловать в Shop Now! </div>
                 <TextField
                     value={this.state.userName}
-                    placeholder="User name"
+                    placeholder="Введите имя пользователя"
                     onChange={(e) => {
                         this.setState({ userName: e.target.value })
                     }} />
                 <TextField
                     value={this.state.pass}
                     type="password"
-                    placeholder="Password"
+                    placeholder="Введите пароль"
                     onChange={(e) => {
                         this.setState({ pass: e.target.value })
                     }} />
                 <Button
                     style={{ marginTop: 10 }}
                     variant="outlined"
-                    color="primary"
+                    color="#E27F86"
                     onClick={() => {
 
                         /* Authenticate the user using entered credentials. */
@@ -65,8 +65,8 @@ class ConnectedLogin extends Component {
                             }))
 
                         })
-                    }}>Log in</Button>
-                {this.state.wrongCred && <div style={{ color: "red" }}>Wrong username and/or password</div>}
+                    }}>Войти</Button>
+                {this.state.wrongCred && <div style={{ color: "red" }}>Неправильное имя пользователя и/или пароль</div>}
             </div>
         );
     }

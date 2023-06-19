@@ -1,8 +1,8 @@
 .header {
     height: 90px;
     display: flex;
-    border-bottom: 1px solid lightgray;
-    background-color: #FAFAFB;
+ 
+    background-color:#FFFF;
 }
 
 .left-part {
@@ -19,5 +19,13 @@
     font-size: 14px;
 }
 .menu{
-    color: #FAFAFB;
+    color: #FFFF;
+}
+.fonti{
+    background: "#E27F86"; 
+    color: "white"; 
+   
+    height:15;
+    width:15; 
+    Size:"small"
 }

@@ -10,6 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Tooltip from '@material-ui/core/Tooltip';
 import PriceDialog from '../PriceDialog/PriceDialog';
+import color from '@material-ui/core/colors/amber';
 
 /*
  * Initially when this component is rendered is consults the query
@@ -124,15 +125,17 @@ class ProductList extends Component {
         this.updateURL({ sortValue: e.value })
     }
 
+    
     /* Determine page title */
-    pageTitle() {
+    pageTitle() { 
+
         let pageTitle;
         if (this.getParamFromURL("category") === "popular") {
-            pageTitle = "Popular products";
+            pageTitle = "Популярные продукты";
         } else if (this.getParamFromURL("directCategory")) {
-            pageTitle = this.getParamFromURL("category");
+            pageTitle = this.getParamFromURL("Категория");
         } else {
-            pageTitle = "Search results";
+            pageTitle = "Результаты пойска";
         }
         return pageTitle;
     }
@@ -143,14 +146,14 @@ class ProductList extends Component {
         return (
             <div className="product-list">
                 <div className="product-list-header">
-                    <div className="online-shop-title">{this.pageTitle()}</div>
-                    <div style={{ width: 500, marginTop: 5, display: "flex", flexGrow: 1, flexDirection: "row-reverse" }}>
+                    <div className="online-shop-title"style={{color:"black"}}>{this.pageTitle()}</div>
+                    <div style={{ width: 300, marginTop: 5, display: "flex", flexGrow: 1, flexDirection: "row-reverse" }}>
 
-                        <div style={{ width: 250 }}>
+                        <div style={{ width: 138}}>
                             <Dropdown
                                 options={[
-                                    { value: 'lh', label: 'Sort by price: Low to High' },
-                                    { value: 'hl', label: 'Sort by price: High to Low' },
+                                    { value: 'lh', label: 'По цене min' },
+                                    { value: 'hl', label: 'По цене max' },
                                 ]}
                                 className='react-dropdown'
                                 onChange={this.handleSortChange} value={this.getParamFromURL("sortValue")} />
@@ -167,18 +170,18 @@ class ProductList extends Component {
                                 </Button>
                             </Tooltip>}
                         <FormControlLabel
-                            style={{ marginBottom: 5 }}
+                            style={{ marginBottom: 9}}
                             control={
                                 <Checkbox
                                     color="primary"
                                     checked={this.getParamFromURL("usePriceFilter")}
-                                    style={{ marginBottom: 5 }}
+                                    style={{ marginBottom: 1, marginRight:-5}}
                                     onChange={(e) => {
                                         this.updateURL({ usePriceFilter: e.target.checked })
                                     }}
                                 />
                             }
-                            label="Filter by price"
+                            label="Цена"
                         />
                     </div>
                 </div>

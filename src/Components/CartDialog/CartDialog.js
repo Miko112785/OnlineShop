@@ -38,8 +38,8 @@ class ConnectedCartDialog extends Component {
 
                     {/* Title */}
                     <div style={{ display: "flex", marginTop: 25 }}>
-                        <ShoppingCartIcon fontSize="large" style={{ marginLeft: 10, color: "#4282ad" }} />
-                        <div style={{ marginTop: 10, marginLeft: 10, fontSize: 16, color: "gray" }}>Products in cart  </div>
+                        <ShoppingCartIcon fontSize="large" style={{ marginLeft: 10, color: "#E27F86" }} />
+                        <div style={{ marginTop: 10, marginLeft: 10, fontSize: 16, color: "white" }}>Корзина</div>
                     </div>
 
                     {/* Render the actual table */}
@@ -47,10 +47,10 @@ class ConnectedCartDialog extends Component {
                         <Table >
                             <TableHead>
                                 <TableRow>
-                                    <TableCell>Item name</TableCell>
-                                    <TableCell>Price</TableCell>
-                                    <TableCell>Quantity</TableCell>
-                                    <TableCell>Action</TableCell>
+                                    <TableCell>Имя продукта</TableCell>
+                                    <TableCell>Цена</TableCell>
+                                    <TableCell>Штук</TableCell>
+                                    <TableCell>Действие</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -63,7 +63,7 @@ class ConnectedCartDialog extends Component {
 
                     {/* Footer related stuff */}
                     <div style={{ marginTop: 20 }}>
-                        <div style={{ float: "left", margin: 10, marginTop: 20, fontSize: 20, color: "gray", fontWeight: "bold" }}> Total Price: {totalPrice} $</div>
+                        <div style={{ float: "left", margin: 10, marginTop: 20, fontSize: 20, color: "white", fontWeight: "bold" }}> Итого: {totalPrice} тг</div>
                         <Button style={{ float: "right", margin: 20 }}
                             variant="outlined"
                             color="primary"
@@ -72,7 +72,7 @@ class ConnectedCartDialog extends Component {
                                 this.props.dispatch(showCartDlg(false));
                                 this.props.dispatch(setCheckedOutItems(this.props.items))
                                 this.props.history.push('/order');
-                            }}>Checkout</Button>
+                            }}>Проверить</Button>
                     </div>
                 </Dialog>
             </div>

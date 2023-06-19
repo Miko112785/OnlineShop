@@ -85,23 +85,23 @@ class ConnectedDetails extends Component {
                     </div>
                     <div style={{ flex: 1, marginLeft: 30, display: "flex", flexDirection: "column" }}>
                         <div style={{ flex: 1 }}>
-                            <div style={{ fontSize: 20, fontWeight: "bold", color: "#4282ad" }}>Price: {this.state.item.price} тг</div>
+                            <div style={{ fontSize: 20, fontWeight: "bold", color: "#E27F86" }}>Цена: {this.state.item.price} тг</div>
                             {this.state.item.inStock ?
-                                <span style={{ color: "#0a7f19", marginTop: 5, fontSize: 14 }}> In Stock</span> :
-                                <span style={{ color: "red", marginTop: 5, fontSize: 14 }}>Not in Stock</span>}
-                            {this.state.item.popular && <span style={{ marginTop: 5, color: "gray", fontSize: 14 }}> | Popular</span>}
+                                <span style={{ color: "#05ed09", marginTop: 5, fontSize: 14 }}> В наличии</span> :
+                                <span style={{ color: "red", marginTop: 5, fontSize: 14 }}>Нет в наличии</span>}
+                            {this.state.item.popular && <span style={{ marginTop: 5, color: "black", fontSize: 14 }}> | Популярные</span>}
 
-                            <div style={{ marginTop: 35 }}>
-                                <Button color="primary" variant="outlined"
+                            <div style={{ marginTop: 35 ,  color: "#E27F86" }}>
+                                <Button color="#E27F86" variant="outlined"
                                     onClick={() => {
                                         this.props.dispatch(addItemInCart({ ...this.state.item, quantity: 1 }));
                                     }}>
-                                    Add to Cart
-                                 <AddShoppingCartIcon style={{ marginLeft: 5 }} />
+                                    Добавить в корзину
+                                 <AddShoppingCartIcon style={{ marginLeft: 5,  color: "#E27F86" }} />
                                 </Button>
                             </div>
                         </div>
-                        <div style={{ fontWeight: "bold", fontSize: 16 }}>Description</div>
+                        <div style={{ fontWeight: "bold", fontSize: 16 }}>Описание</div>
                         <div style={{ flex: 1, maxHeight: 200, fontSize: 14, overflow: "auto" }} dangerouslySetInnerHTML={this.getRawMarkup(this.state.item.description)}></div>
 
                     </div>
@@ -109,7 +109,7 @@ class ConnectedDetails extends Component {
 
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div className="online-shop-title-smaller">Related Items {this.state.relatedItems.length === 0 ? "(N/A)" : ""}</div>
+                    <div className="online-shop-title-smaller">Похожие материалы {this.state.relatedItems.length === 0 ? "(N/A)" : ""}</div>
 
                     {this.state.relatedItems.length !== 0 &&
                         <Slider {...sliderSettings}>

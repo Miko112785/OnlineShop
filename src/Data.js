@@ -95,13 +95,13 @@ const sampleProducts = [
   },
   {
     id: 9,
-    name: "Игрушка",
+    name: "Коляска",
     category: "Детские",
-    price: 1300,
-    description: "",
+    price: 35000,
+    description: "Детская универсальная коляска предназначена для использования летом и зимой для детей от рождения и до 3 лет. Поворотные передние колеса и мягкая амортизация сделают прогулки с малышом легкими и приятными. Люльку можно снять с рамы и перенести домой, не тревожа при этом сон младенцы. Вес - 11 кг, без труда перевозится в лифте и в транспорте.",
     inStock: true,
     popular: true,
-    imageURL: "https://static.insales-cdn.com/r/SyuJTKpAdIE/rs:fit:400:0:1/q:100/plain/images/products/1/4410/618746170/large_card__14_.png@webp"
+    imageURL: "https://static.insales-cdn.com/r/ujM_da6E_Vs/rs:fit:1000:1000:1/plain/images/products/1/4149/618754101/card__46_.png@webp"
   },
   {
     id: 10,
@@ -114,20 +114,20 @@ const sampleProducts = [
     imageURL: "https://ae04.alicdn.com/kf/HTB16ciQyf9TBuNjy0Fcq6zeiFXa4.jpg_640x640.jpg_.webp"
   },
     {
-      id: 1,
+      id: 11,
       name: "Мягкая игрушка",
-      category: "Clothing and Shoes",
-      price: 55,
+      category: "Игрушки",
+      price: 3500,
       description: "Очаровательная мягкая игрушка – сказочный персонаж, любимый всеми детьми. Игрушка изготовлена из приятного на ощупь, высококачественного текстильного материала с бархатистой поверхностью. ",
       inStock: true,
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/V6OFZcN0zBg/rs:fit:360:0:1/q:100/plain/images/products/1/2044/618743804/large_card__6_.png@webp"
     },
     {
-      id: 2,
+      id: 12,
       name: "Миньон",
-      category: "Jewelry and Watches",
-      price: 101,
+      category: "Игрушки",
+      price: 4000,
       description: "Тот самый персонаж миньон из популярного мультфильма. Милаха Миньон, с большими глазами и чудесной улыбкой, эта милая популярная мягкая игрушка станет отличным подарком для взрослых и детей. ",
       inStock: true,
   
@@ -135,51 +135,41 @@ const sampleProducts = [
       imageURL: "https://static.insales-cdn.com/r/CGef8Cgx8LA/rs:fit:360:0:1/q:100/plain/images/products/1/4410/618746170/large_card__14_.png@webp"
     },
     {
-      id: 3,
+      id: 13,
       name: "Мягкая игрушка",
-      category: "Jewelry and Watches",
-      price: 200,
-      description:
-        '* 36 mm stainless steel case with mineral dial window\n' +
-        '* Automatic self-wind movement with analog display\n' +
-        '* Stainless steel bracelet with fold-over clasp',
+      category: "Игрушки",
+      price: 3000,
+      description:"",
       inStock: true,
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/iXMApCNsy3w/rs:fit:360:0:1/q:100/plain/images/products/1/2140/618743900/large_card__7_.png@webp"
     },
     {
-      id: 4,
+      id: 14,
       name: "Блокнот",
-      category: "Books",
-      price: 102,
-      description: "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia"+
-       "and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in"+
-       "a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life"+
-       "with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is"+
-       "until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
+      category: "Канцеляские товары",
+      price: 750,
+      description: "",
       inStock: true,
   
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/3B220T9an20/rs:fit:400:0:1/q:100/plain/images/products/1/7068/618748828/large_card__22_.png@webp"
     },
     {
-      id: 5,
+      id: 15,
       name: "Горные лыжи",
-      category: "Computers",
-      price: 102,
-      description:
-        '* Amazing angles: Share consistent high-color fidelity with In-Plane Switching (IPS) technology across a 27-inch diagonal screen. A stunning vantage point for everyone, from almost anywhere\n' +
-        '* Distinctively modern and accessible: The contemporary thin profile is enhanced by the modern white and silver colors.The open wedge stand design provides convenient access to VGA and dual HDMI ports',
+      category: "Спорт",
+      price: 100000,
+      description:"",
       inStock: true,
-  
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/1CdmLZwVRpc/rs:fit:400:0:1/q:100/plain/images/products/1/2486/618752438/large_card__36_.png@webp"
     },
     {
-      id: 6,
+      id: 16,
       name: "Фигурные коньки",
-      category: "Home",
-      price: 200,
+      category: "Спорт",
+      price: 50000,
       description:
         'Фигурные коньки - это коньки для активного отдыха любителей фигурного катания любого уровня.Фигурные коньки обеспечивают отличную фиксацию благодаря жесткому верху ботинок, ваши ноги будут хорошо зафиксированы. Лезвие выполнено из нержавеющей стали. Коньки прошли заточку на заводе. ',
       inStock: true,
@@ -188,39 +178,50 @@ const sampleProducts = [
       imageURL: "https://static.insales-cdn.com/r/8vtp5bKloGc/rs:fit:400:0:1/q:100/plain/images/products/1/2166/618752118/large_card__35_.png@webp"
     },
     {
-      id: 7,
-      name: " Цветные карандаши",
-      category: "Jewelry and Watches",
-      price: 200,
+      id: 17,
+      name: "Цветные карандаши",
+      category: 'Канцеляские товары',
+      price: 900,
       description: "Набор цветных карандашей 12 цветов изготовлен из древесины липы высокого качества. Имеют утолщенный ударостойкий грифель повышенной мягкости и яркости, при заточке не крошатся и не ломаются. ",
       inStock: true,
-      popular: true,
+      popular: false,
       imageURL: "https://static.insales-cdn.com/r/IO94XsuQqqI/rs:fit:400:0:1/q:100/plain/images/products/1/7438/618749198/large_card__26_.png@webp"
     },
     {
-      id: 8,
+      id: 18,
       name: "Школьный рюкзак",
-      category: "Clothing and Shoes",
-      price: 55,
+      category: 'Аксессуары',
+      price: 5600,
       description: "Школьный рюкзак подойдет для прогулок в школу и повседневной носки в городе. Материал прочный, облегченный и водонепроницаемый.",
       inStock: true,
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/-nCmFricO_o/rs:fit:400:0:1/q:100/plain/images/products/1/714/618750666/large_card__31_.png@webp"
     },
     {
-      id: 9,
+      id: 19,
       name: "Велосипед",
-      category: "Computers",
-      price: 55,
+      category: "Спорт",
+      price: 45000,
       description: "Велосипед складной, подарит вам множество положительных эмоций от комфортной езды. Прочная рама из стали 17 размера одинаково хорошо подойдет подросткам и взрослым с ростом от 140 см до 179см. Складной велосипед удобен в транспортировке, а также в хранении.",
       inStock: true,
       popular: true,
       imageURL: "https://static.insales-cdn.com/r/qoClrbMBWDQ/rs:fit:400:0:1/q:100/plain/images/products/1/2583/618752535/large_card__37_.png@webp"
     },
+    {
+      id: 20,
+      name: "Велосипед",
+      category: "Спорт",
+      price: 45000,
+      description: "Велосипед складной, подарит вам множество положительных эмоций от комфортной езды. Прочная рама из стали 17 размера одинаково хорошо подойдет подросткам и взрослым с ростом от 140 см до 179см. Складной велосипед удобен в транспортировке, а также в хранении.",
+      inStock: true,
+      popular: true,
+      
+      imageURL: "https://static.insales-cdn.com/r/qoClrbMBWDQ/rs:fit:400:0:1/q:100/plain/images/products/1/2583/618752535/large_card__37_.png@webp"
+    },
   ]
 
 /* Available categories */
-const categories = ['Одежда', 'Обувь', 'Аксессуары', "Спорт",'Красота', 'Канцелярские товары', "Телефоны и гаджеты", 'Игрушки','Товары для дома', 'Товары для животных', 'Новинки', 'Популярные', "Скидки"]
+const categories = ['Одежда', 'Обувь', 'Аксессуары', "Спорт", 'Красота', 'Канцелярские товары', "Телефоны и гаджеты", 'Игрушки','Товары для дома', 'Товары для животных', 'Новинки', 'Популярные', "Скидки"]
 
 /* 
  * This function generates menu items.
@@ -228,15 +229,15 @@ const categories = ['Одежда', 'Обувь', 'Аксессуары', "Сп�
  */
 const generateMenuItems = () => {
   let menuItems = [
-    { type: "title", name: "MAIN", id: 0 },
-    { type: "item", name: "Home page", url: "/", parent: "MAIN", id: 1},
-    { type: "item", name: "About us", url: "/about", parent: "MAIN", id: 2 },
-    { type: "title", name: "CATEGORIES", id: 3 },
+   // { type: "title", name: "MAIN", id: 0 },
+   // { type: "item", name: "Home page", url: "/", parent: "MAIN", id: 1},
+    //{ type: "item", name: "About us", url: "/about", parent: "MAIN", id: 2 },
+    { type: "title", name: "Категория", id: 3 },
   ];
 
   menuItems = menuItems.concat(categories.map((x, i) => {
     return {
-      name: x, url: "/search/?directCategory=true&category=" + x, id: 4 + i , type: "item", parent: "CATEGORIES"
+      name: x, url: "/search/?directCategory=true&category=" + x, id: 4 + i , type: "item", parent: "Категория"
     }
   }))
 

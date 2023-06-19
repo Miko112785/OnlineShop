@@ -28,13 +28,13 @@ class ConnectedOrder extends Component {
 
         return (
             <div >
-                <div className="online-shop-title">Please review order before purchase</div>
+                <div className="online-shop-title">Пожалуйста, ознакомьтесь с заказом перед покупкой</div>
                 <Table >
                     <TableHead>
                         <TableRow>
-                            <TableCell>Item name</TableCell>
-                            <TableCell>Price</TableCell>
-                            <TableCell>Quantity</TableCell>
+                            <TableCell>Имя продукта</TableCell>
+                            <TableCell>Цена</TableCell>
+                            <TableCell>Штук</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -54,7 +54,7 @@ class ConnectedOrder extends Component {
                     </TableBody>
                 </Table>
 
-                <div style={{ marginLeft: 5, marginTop: 50, fontSize: 22 }}>Total price: {totalPrice} тг</div>
+                <div style={{ marginLeft: 5, marginTop: 50, fontSize: 22 }}>Итого: {totalPrice} тг</div>
                 <Button
                     color="primary"
                     variant="outlined"
@@ -62,7 +62,7 @@ class ConnectedOrder extends Component {
                     onClick={() => {
                         console.log("purchased");
                     }}
-                    style={{ margin: 5, marginTop: 30 }}>Purchase</Button>
+                    style={{ margin: 5, marginTop: 30 }}>Покупка</Button>
                 <Button
                     color="secondary"
                     variant="outlined"
@@ -70,7 +70,7 @@ class ConnectedOrder extends Component {
                     onClick={() => {
                         this.props.dispatch(setCheckedOutItems([]))
                     }}
-                    style={{ margin: 5, marginTop: 30 }}>Discard</Button>
+                    style={{ margin: 5, marginTop: 30 }}>Отказ</Button>
             </div>
         );
     }
